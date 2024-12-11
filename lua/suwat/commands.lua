@@ -63,6 +63,9 @@ M.open_today_journal = function()
     end
 
     vim.cmd(string.format("edit %s", journal_path))
+
+    -- Move cursor to the bottom
+    vim.api.nvim_exec("normal! GA", false)
 end
 
 -- TODO: simplify open next and prev journals
